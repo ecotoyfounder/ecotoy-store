@@ -9,12 +9,13 @@ module.exports = {
       colors: {
         primary: "#7570F9",
         secondary: "#F970F4",
-        darkColor: "#5D169D",
+        darkColor: "#4113B7",
         light: "#FDEFFF",
         textColor: "#803CBD",
         bgDark: "#70F5F9",
         bgLight: "#F6FFFE",
-        footerColor: "#8C85EF"
+        footerColor: "#8C85EF",
+        placeholder: "#97c6fc"
       }
     },
   },
@@ -28,7 +29,10 @@ module.exports = {
           minWidth: "110px",
           height: "37px",
           fontSize: 18,
+          fontWeight: "600",
           transitionDelay: ".07s",
+          cursor: "pointer",
+          textAlign: "center",
 
           "&:hover": {
             backgroundColor: "#5D169D",
@@ -42,7 +46,11 @@ module.exports = {
           minWidth: "110px",
           height: "37px",
           fontSize: 18,
+          fontWeight: "600",
           transitionDelay: ".07s",
+          cursor: "pointer",
+          textAlign: "center",
+          paddingTop: "3.5px",
 
           "&:hover": {
             backgroundColor: "#5D169D",
@@ -50,18 +58,25 @@ module.exports = {
           }
         },
         ".btn-light": {
-          backgroundColor: "#FDEFFF",
-          color: "#803CBD",
+          backgroundColor: "#fff",
+          color: "#4113b7",
           borderRadius: "50px",
           minWidth: "110px",
           height: "37px",
           fontSize: 18,
+          fontWeight: "600",
           transitionDelay: ".07s",
+          cursor: "pointer",
+          textAlign: "center",
+          paddingTop: "3.5px",
+          outlineStyle: "solid",
+          outlineColor: "#70F5F9",
+          outlineWidth: "2px",
 
           "&:hover": {
-            backgroundColor: "#F970F4",
+            backgroundColor: "#00e7f3",
             color: "#FDEFFF",
-            fontWeight: "bold",
+            fontWeight: "bold"
           }
         },
         ".btn-arrow-dark": {
@@ -71,6 +86,8 @@ module.exports = {
           width: "35px",
           height: "35px",
           fontSize: 16,
+          fontWeight: "600",
+          cursor: "pointer",
           transitionDelay: ".07s",
 
           "&:hover": {
@@ -84,6 +101,8 @@ module.exports = {
           borderRadius: "5px",
           width: "25px",
           height: "25px",
+          fontWeight: "600",
+          cursor: "pointer",
           transitionDelay: ".07s",
 
           "&:hover": {
@@ -95,6 +114,20 @@ module.exports = {
         ".nav-img": {
           width: "30px",
           marginX: "10px"
+        },
+        ".img-outline": {
+          outlineStyle: "solid",
+          outlineColor: "#70f4f9",
+          outlineWidth: "1px",
+          borderRadius: "50%",
+
+          "&:hover": {
+            transform: "scale(1.1)",
+            transition: "0.2s",
+            color: "#F6FFFE",
+            outlineColor: "#00b9c3",
+            outlineWidth: "2px",
+          }
         }
       })
     })
