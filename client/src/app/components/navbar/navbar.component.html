@@ -1,26 +1,63 @@
-<nav class="backdrop-blur border-b-bgDark border-b-[2.5px] border-opacity-40 fixed top-0 left-0 right-0 h-[70px] z-10 py-4">
-  <div class="flex justify-between max-w-[1280px] m-auto">
-    <ul class="flex justify-start">
-      <li><a [routerLink]="['/']"><img
-        alt="logo"
-        class="hover:outline hover:outline-2 hover:outline-bgDark rounded-full" src="/assets/icons/ecotoy_logo_wh_bg.svg"></a></li>
-      <li class="ml-10"><a
-        [routerLink]="['/']"><img alt="search" class="hover:outline hover:outline-2 hover:outline-bgDark rounded-full"
-                                  src="/assets/icons/search_wh_bg_icon.svg"></a></li>
+<nav
+  class="backdrop-blur border-b-bgDark border-b-[2.5px] border-opacity-40 fixed top-0 left-0 right-0 h-[70px] z-10 py-4">
+  <div
+    class="flex justify-between max-w-[1280px] m-auto 2xl:mx-14 xsm:mx-7">
+    <ul
+      class="flex justify-start">
+      <li>
+        <a
+          [routerLink]="['/']"><img
+          alt="logo"
+          class="navbar-outline"
+          src="/assets/icons/ecotoy_logo_wh_bg.svg"></a>
+      </li>
+      <li
+        class="ml-10 sm:ml-5 xsm:hidden">
+        <a
+          [routerLink]="['/']"><img
+          alt="search"
+          class="navbar-outline"
+          src="/assets/icons/search_wh_bg_icon.svg"></a>
+      </li>
       <input
-        class="placeholder-placeholder ml-3 focus:outline-2 focus:outline-bgDark rounded-md pl-2 w-56 text-darkColor"
+        class="search-placeholder placeholder-placeholderColor xsm:hidden"
         placeholder="Search..."
         type="text">
     </ul>
-    <ul class="flex justify-end">
-      <li class="btn-light ml-5"><a [routerLink]="['/shop']">Shop</a></li>
-      <li class="btn-light ml-5"><a [routerLink]="['/playroom']">Playroom</a></li>
-      <li>
-        <button [routerLink]="['/login']" (click)="auth.logIn()" class="btn-primary ml-10">Log In</button>
+    <ul
+      class="flex justify-end">
+      <li
+        class="lg:hidden mobile-lg:visible btn-light ml-5">
+        <a
+          [routerLink]="['/shop']">Shop</a>
       </li>
-      <li class="ml-10"><a [routerLink]="['/cart']"><img
-        alt="cart"
-        class="hover:outline hover:outline-2 hover:outline-bgDark rounded-full" src="/assets/icons/cart_wh_bg_icon.svg"></a></li>
+      <li
+        class="lg:hidden mobile-lg:visible btn-light ml-5">
+        <a
+          [routerLink]="['/playroom']">Playroom</a>
+      </li>
+      <li>
+        <button
+          (click)="auth.logIn()"
+          [routerLink]="['/login']"
+          class="lg:hidden mobile-2xl:visible btn-primary ml-10">
+          Log
+          In
+        </button>
+      </li>
+      <li>
+        <a
+          [routerLink]="['/cart']"><img
+          alt="cart"
+          class="sm:hidden mobile-sm:visible ml-10 navbar-outline"
+          src="/assets/icons/cart_wh_bg_icon.svg"></a>
+      </li>
+      <button
+        class="lg:visible lg:ml-10 sm:ml-5 mobile-lg:hidden navbar-outline">
+        <img
+          alt="burger"
+          src="/assets/icons/burger_wh_bg_icon.svg">
+      </button>
     </ul>
   </div>
 </nav>
