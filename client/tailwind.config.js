@@ -1,4 +1,4 @@
-const plugin = require("tailwindcss/plugin")
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
@@ -15,7 +15,25 @@ module.exports = {
         bgDark: "#70F5F9",
         bgLight: "#F6FFFE",
         footerColor: "#8C85EF",
-        placeholder: "#97c6fc"
+        placeholderColor: "#97c6fc"
+      },
+      screens: {
+        "2xl": {"max": "1370px"},
+        "xl": {"max": "1120px"},
+        "lg": {"max": "1025px"},
+        "md": {"max": "800px"},
+        "sm": {"max": "589px"},
+        "xsm": {"max": "489px"},
+        "usm": {"max": "389px"},
+        "fsm": {"max": "319px"},
+        "mobile-2xl": "1370px",
+        "mobile-xl": "1120px",
+        "mobile-lg": "1025px",
+        "mobile-md": "800px",
+        "mobile-sm": "589px",
+        "mobile-xsm": "489px",
+        "mobile-usm": "389px",
+        "mobile-fsm": "319px"
       }
     },
   },
@@ -125,12 +143,37 @@ module.exports = {
             transform: "scale(1.1)",
             transition: "0.2s",
             color: "#F6FFFE",
-            outlineColor: "#00b9c3",
+            outlineColor: "#00e1f3",
+            outlineWidth: "2px",
+          }
+        },
+        ".navbar-outline": {
+          outlineStyle: "solid",
+          outlineColor: "transparent",
+          borderRadius: "50%",
+
+          "&:hover": {
+            transform: "scale(1.1)",
+            transition: "0.2s",
+            color: "#F6FFFE",
+            outlineColor: "#04eef7",
+            outlineWidth: "1.9px",
+          }
+        },
+        ".search-placeholder": {
+          color: "#4113b7",
+          marginLeft: "7px",
+          paddingLeft: "5px",
+          width: "186px",
+          borderRadius: "5px",
+
+          "&:focus": {
+            outlineColor: "#70F5F9",
             outlineWidth: "2px",
           }
         }
-      })
+      });
     })
   ],
-}
+};
 
