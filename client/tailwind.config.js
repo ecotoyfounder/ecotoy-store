@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         primary: "#7570F9",
         secondary: "#F970F4",
+        darkest: "#00d0df",
         darkColor: "#4113B7",
         light: "#FDEFFF",
         textColor: "#803CBD",
@@ -18,6 +19,7 @@ module.exports = {
         placeholderColor: "#97c6fc"
       },
       screens: {
+        "xxl": {"max": "1680px"},
         "2xl": {"max": "1370px"},
         "xl": {"max": "1120px"},
         "lg": {"max": "1025px"},
@@ -57,6 +59,7 @@ module.exports = {
             fontWeight: "bold",
           }
         },
+
         ".btn-secondary": {
           backgroundColor: "#F970F4",
           color: "#F6FFFE",
@@ -75,7 +78,8 @@ module.exports = {
             fontWeight: "bold",
           }
         },
-        ".btn-light": {
+
+        ".btn-light, .btn-light-full": {
           backgroundColor: "#fff",
           color: "#4113b7",
           borderRadius: "50px",
@@ -97,6 +101,11 @@ module.exports = {
             fontWeight: "bold"
           }
         },
+
+        ".btn-light-full": {
+          minWidth: "100%"
+        },
+
         ".btn-arrow-dark": {
           backgroundColor: "#7570F9",
           color: "#F6FFFE",
@@ -113,6 +122,7 @@ module.exports = {
             fontWeight: "bold",
           }
         },
+
         ".btn-arrow-light": {
           backgroundColor: "#F6FFFE",
           color: "#803CBD",
@@ -129,10 +139,12 @@ module.exports = {
             color: "#F6FFFE",
           }
         },
+
         ".nav-img": {
           width: "30px",
           marginX: "10px"
         },
+
         ".img-outline": {
           outlineStyle: "solid",
           outlineColor: "#70f4f9",
@@ -147,10 +159,12 @@ module.exports = {
             outlineWidth: "2px",
           }
         },
+
         ".navbar-outline": {
           outlineStyle: "solid",
           outlineColor: "transparent",
           borderRadius: "50%",
+          boxShadow: "2px 2px 3px #70f4f9",
 
           "&:hover": {
             transform: "scale(1.1)",
@@ -160,6 +174,7 @@ module.exports = {
             outlineWidth: "1.9px",
           }
         },
+
         ".search-placeholder": {
           color: "#4113b7",
           marginLeft: "7px",
@@ -170,6 +185,38 @@ module.exports = {
           "&:focus": {
             outlineColor: "#70F5F9",
             outlineWidth: "2px",
+          }
+        },
+
+        ".good-img": {
+          borderRadius: "5%",
+          boxShadow: "5px 5px 9px #70F5F9",
+          cursor: "pointer",
+          outlineStyle: "solid",
+          outlineColor: "transparent",
+          maxWidth: "350px",
+
+          "&:hover": {
+            transform: "scale(1.05)",
+            transition: "0.5s",
+            outlineColor: "#04eef7",
+            outlineWidth: "2px",
+          }
+        },
+
+        ".review-card": {
+          outlineStyle: "solid",
+          outlineColor: "#04eef7",
+          outlineWidth: "2px",
+          borderRadius: "5%",
+          width: "225px",
+          textAlign: "center",
+          padding: "4px",
+          cursor: "pointer",
+
+          "&:hover": {
+            transform: "scale(1.05)",
+            transition: "0.5s"
           }
         }
       });
