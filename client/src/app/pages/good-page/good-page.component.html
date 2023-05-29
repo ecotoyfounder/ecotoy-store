@@ -1,33 +1,46 @@
-<div class="mt-24 2xl:mx-14 xsm:mx-7">
-  <button>
-    <img alt="back"
-         class="navbar-outline"
-         src="/assets/icons/back_arrow.svg">
-  </button>
-  <div class="text-center">
-    <h1 class="text-2xl">Good Name</h1>
-    <h1 class="text-xl">Good Category</h1>
+<div class="mt-20 2xl:mx-14 xsm:mx-7 lg:overflow-y-hidden lg:h-max">
+  <div class="flex relative">
+    <button class="navbar-outline mt-2.5 z-50"
+    >
+      <img alt="back"
+           src="/assets/icons/back_arrow.svg">
+    </button>
+    <div class="text-center absolute mx-auto left-0 right-0">
+      <h1 class="text-2xl">Good Name</h1>
+      <h1 class="text-xl">Good Category</h1>
+    </div>
   </div>
-  <div class="flex mt-14">
-    <div class="w-fit text-center">
+  <div class="flex mt-14 lg:block">
+    <div class="w-fit text-center lg:w-full">
       <img
         alt="good-image"
-        class="good-img"
+        class="good-img lg:mx-auto sm:max-w-[320px] usm:max-w-[300px] ssm:max-w-[220px]"
         src="/assets/good-images/ABC_Blocks.jpg">
       <h1 class="mt-7 text-2xl text-darkest font-semibold">€ Price</h1>
-      <button class="btn-light-full pb-1.5 mt-7">Add to Cart</button>
+      <button class="mobile-lg:btn-light-full lg:cursor-pointer lg:pt-0.5 lg:text-[18px] font-semibold lg:h-[37px] lg:text-darkColor lg:bg-white lg:outline lg:outline-bgDark lg:outline-2 lg:rounded-full lg:w-[350px] lg:delay-200 lg:hover:text-white lg:hover:bg-bgDark lg:hover:font-bold sm:w-[320px] xsm:w-[315px] ssm:w-[220px] pb-1.5 px-2 mt-7">Add to Cart</button>
     </div>
-    <div class="ml-10 relative">
-      <strong>Good Description</strong>
-      <p class="mt-7 line-clamp-5 max-w-[900px]">
+    <div class="ml-10 mobile-lg:relative lg:ml-0 lg:mt-7">
+      <h1 class="text-xl lg:text-center">Good Description</h1>
+      <p class="mt-7 mobile-lg:line-clamp-6 max-w-[900px]">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad architecto asperiores, cum delectus eos error et eum harum id iusto labore minima nostrum officiis perferendis quidem quisquam quo repellat repellendus repudiandae sequi ullam voluptate? A architecto asperiores aut blanditiis cum distinctio dolorem ducimus ea, fugiat ipsam ipsum libero magnam modi molestias placeat porro provident sequi tempora veniam veritatis. Cum maxime neque quibusdam veniam! Aut consequuntur debitis doloremque error facere fuga, impedit, labore magnam necessitatibus, officiis perspiciatis repudiandae ullam! Amet consectetur doloremque ducimus itaque magni maiores nesciunt nisi nulla perspiciatis placeat quas quia quo quos reprehenderit rerum sunt tenetur, vero.
       </p>
-      <div class="mt-14">
-        <h1 class="text-2xl">Reviews</h1>
-        <div class="flex absolute bottom-0 left-0 right-0">
-          <app-review-card></app-review-card>
-          <app-review-card></app-review-card>
-          <app-review-card></app-review-card>
+      <div class="mt-8">
+        <h1 class="text-2xl lg:text-center">Reviews</h1>
+        <div class="flex mobile-lg:absolute mobile-lg:bottom-0 mobile-lg:left-0 mobile-lg:right-0 max-w-[900px] overflow-x-hidden">
+          <div class="flex relative max-w-[900px] overflow-x-hidden">
+            <button class="absolute navbar-outline top-[45%] left-1 z-30">
+              <img alt="left"
+                   src="/assets/icons/back_arrow.svg">
+            </button>
+            <app-review-card></app-review-card>
+            <app-review-card></app-review-card>
+            <app-review-card></app-review-card>
+            <app-review-card></app-review-card>
+            <button class="absolute navbar-outline top-[45%] right-4 z-30">
+              <img alt="right"
+                   src="/assets/icons/forward_arrow.svg">
+            </button>
+          </div>
         </div>
       </div>
     </div>
