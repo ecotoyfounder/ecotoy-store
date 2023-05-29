@@ -27,6 +27,7 @@ module.exports = {
         "sm": {"max": "589px"},
         "xsm": {"max": "489px"},
         "usm": {"max": "389px"},
+        "ssm": {"max": "374px"},
         "fsm": {"max": "319px"},
         "mobile-2xl": "1370px",
         "mobile-xl": "1120px",
@@ -209,8 +210,7 @@ module.exports = {
           outlineColor: "#04eef7",
           outlineWidth: "2px",
           borderRadius: "5%",
-          width: "225px",
-          textAlign: "center",
+          maxWidth: "225px",
           padding: "4px",
           cursor: "pointer",
 
