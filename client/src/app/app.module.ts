@@ -23,6 +23,10 @@ import {ClientDashboardComponent} from "./main/pages/client-dashboard/client-das
 import {Avatar} from "./components/avatar/avatar";
 import { ReviewPageComponent } from './main/pages/review-page/review-page.component';
 import { ReviewCardComponent } from './components/review-card/review-card.component';
+import { GoodCardComponent } from './components/good-card/good-card.component';
+import { SearchComponent } from './components/search/search.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { SelectComponent } from './components/select/select.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,11 @@ import { ReviewCardComponent } from './components/review-card/review-card.compon
     ClientDashboardComponent,
     Avatar,
     ReviewPageComponent,
-    ReviewCardComponent
+    ReviewCardComponent,
+    GoodCardComponent,
+    SearchComponent,
+    FilterComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
