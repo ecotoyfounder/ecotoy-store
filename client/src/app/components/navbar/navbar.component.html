@@ -11,18 +11,7 @@
           class="navbar-outline"
           src="/assets/icons/ecotoy_logo_wh_bg.svg"></a>
       </li>
-      <li
-        class="ml-10 sm:ml-5 xsm:hidden">
-        <a
-          [routerLink]="['/']"><img
-          alt="search"
-          class="navbar-outline"
-          src="/assets/icons/search_wh_bg_icon.svg"></a>
-      </li>
-      <input
-        class="search-placeholder placeholder-placeholderColor xsm:hidden"
-        placeholder="Search..."
-        type="text">
+      <app-search></app-search>
     </ul>
     <ul
       class="flex justify-end">

@@ -176,6 +176,21 @@ module.exports = {
           }
         },
 
+        ".input": {
+          color: "#4113b7",
+          boxShadow: "2px 2px 3px #70f4f9",
+          cursor: "pointer",
+          minWidth: "220px",
+          maxWidth: "350px",
+          padding: "5px",
+          borderRadius: "5px",
+
+          "&:focus": {
+            outlineColor: "#70F5F9",
+            outlineWidth: "2px"
+          }
+        },
+
         ".search-placeholder": {
           color: "#4113b7",
           marginLeft: "7px",
@@ -212,6 +227,26 @@ module.exports = {
           borderRadius: "5%",
           maxWidth: "225px",
           padding: "4px",
+          cursor: "pointer",
+
+          "&:hover": {
+            transform: "scale(1.05)",
+            transition: "0.5s"
+          }
+        },
+
+        ".good-card": {
+          boxSizing: "border-box",
+          display: "flex",
+          flexDirection: "column",
+          outlineStyle: "solid",
+          outlineColor: "#04eef7",
+          outlineWidth: "2px",
+          borderRadius: "5%",
+          minWidth: "220px",
+          maxWidth: "350px",
+          paddingBlock: "14px",
+          paddingInline: "20px",
           cursor: "pointer",
 
           "&:hover": {
