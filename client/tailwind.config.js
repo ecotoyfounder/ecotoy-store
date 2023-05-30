@@ -153,7 +153,7 @@ module.exports = {
           borderRadius: "50%",
 
           "&:hover": {
-            transform: "scale(1.1)",
+            transform: "scale(1.05)",
             transition: "0.2s",
             color: "#F6FFFE",
             outlineColor: "#00e1f3",

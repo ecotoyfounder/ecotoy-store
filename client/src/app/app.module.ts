@@ -27,6 +27,7 @@ import { GoodCardComponent } from './components/good-card/good-card.component';
 import { SearchComponent } from './components/search/search.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { SelectComponent } from './components/select/select.component';
+import { CatalogPageComponent } from './pages/catalog-page/catalog-page.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { SelectComponent } from './components/select/select.component';
     GoodCardComponent,
     SearchComponent,
     FilterComponent,
-    SelectComponent
+    SelectComponent,
+    CatalogPageComponent
   ],
   imports: [
     BrowserModule,
