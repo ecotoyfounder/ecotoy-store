@@ -193,10 +193,11 @@ module.exports = {
 
         ".search-placeholder": {
           color: "#4113b7",
+          borderRadius: "5px",
+          boxShadow: "2px 2px 3px #70F5F9",
           marginLeft: "7px",
           paddingLeft: "5px",
           width: "186px",
-          borderRadius: "5px",
 
           "&:focus": {
             outlineColor: "#70F5F9",
@@ -210,7 +211,6 @@ module.exports = {
           cursor: "pointer",
           outlineStyle: "solid",
           outlineColor: "transparent",
-          maxWidth: "350px",
 
           "&:hover": {
             transform: "scale(1.05)",
@@ -243,8 +243,7 @@ module.exports = {
           outlineColor: "#04eef7",
           outlineWidth: "2px",
           borderRadius: "5%",
-          minWidth: "220px",
-          maxWidth: "350px",
+          minWidth: "200px",
           paddingBlock: "14px",
           paddingInline: "20px",
           cursor: "pointer",

@@ -1,14 +1,14 @@
 <div>
-  <div class="flex justify-between">
-    <button class="navbar-outline mt-2.5 z-50"
+  <div class="flex justify-between sm:block sm:text-center sm:my-2 px-2">
+    <button class="navbar-outline mt-2.5 z-50 mobile-sm:visible sm:hidden"
     >
       <img alt="back"
            src="/assets/icons/back_arrow.svg">
     </button>
-    <app-search></app-search>
-    <app-select></app-select>
+    <app-search class="mobile-sm:hidden sm:visible"></app-search>
+    <app-select class="mt-2"></app-select>
   </div>
-  <div class="grid grid-cols-4 gap-7 pt-5 px-5">
+  <div class="grid grid-cols-3 xl:grid-cols-2 xsm:grid-cols-1 gap-6 pt-5 px-3 sm:mx-auto">
     <app-good-card></app-good-card>
     <app-good-card></app-good-card>
     <app-good-card></app-good-card>
