@@ -8,6 +8,7 @@ import {ErrorPageComponent} from "./pages/error-page/error-page.component";
 import {MainLayoutComponent} from "./main/main-layout/main-layout.component";
 import {GoodPageComponent} from "./pages/good-page/good-page.component";
 import {ClientLoginComponent} from "./main/pages/client-login/client-login.component";
+import {CatalogPageComponent} from "./pages/catalog-page/catalog-page.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,8 @@ const routes: Routes = [
       {path: "", component: HomePageComponent},
       {
         path: "shop", component: ShopPageComponent, children: [
+          {path: "", redirectTo: "catalog", pathMatch: "full"},
+          {path: "", component: CatalogPageComponent},
           {path: "good/:id", component: GoodPageComponent}
         ]
       },

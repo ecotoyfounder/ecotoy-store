@@ -1,9 +1,10 @@
-<div class="good-card mobile-md:max-w-[350px]">
+<div [routerLink]="['/shop/good', 12]"
+     class="good-card mobile-md:max-w-[350px]">
   <div class="flex justify-between pb-3 sm:block sm:text-center">
     <h1 class="text-xl font-bold fsm:mb-2">Title of Good</h1>
     <h1 class="text-xl">Category</h1>
   </div>
-  <img alt="good-image"
+  <img alt="good-image lg:mx-auto max-w-[350px] sm:max-w-[320px] usm:max-w-[300px] ssm:max-w-[220px]"
        class="good-img hover:scale-100"
        src="/assets/good-images/ABC_Blocks.jpg">
   <div class="flex justify-between pt-3 fsm:block fsm:text-center">
