@@ -20,14 +20,11 @@ import {FooterComponent} from "./components/footer/footer.component";
 import {ClientLoginComponent} from "./main/pages/client-login/client-login.component";
 import {ClientSignupComponent} from "./main/pages/client-signup/client-signup.component";
 import {ClientDashboardComponent} from "./main/pages/client-dashboard/client-dashboard.component";
-import {Avatar} from "./components/avatar/avatar";
-import { ReviewPageComponent } from './main/pages/review-page/review-page.component';
-import { ReviewCardComponent } from './components/review-card/review-card.component';
-import { GoodCardComponent } from './components/good-card/good-card.component';
-import { SearchComponent } from './components/search/search.component';
-import { FilterComponent } from './components/filter/filter.component';
-import { SelectComponent } from './components/select/select.component';
-import { CatalogPageComponent } from './pages/catalog-page/catalog-page.component';
+import {ReviewPageComponent} from "./main/pages/review-page/review-page.component";
+import {ReviewCardComponent} from "./components/review-card/review-card.component";
+import {GoodCardComponent} from "./components/good-card/good-card.component";
+import {CatalogPageComponent} from "./pages/catalog-page/catalog-page.component";
+import {SharedModule} from "./common-components/shared.module";
 
 @NgModule({
   declarations: [
@@ -49,20 +46,18 @@ import { CatalogPageComponent } from './pages/catalog-page/catalog-page.componen
     ClientLoginComponent,
     ClientSignupComponent,
     ClientDashboardComponent,
-    Avatar,
     ReviewPageComponent,
     ReviewCardComponent,
     GoodCardComponent,
-    SearchComponent,
-    FilterComponent,
-    SelectComponent,
     CatalogPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

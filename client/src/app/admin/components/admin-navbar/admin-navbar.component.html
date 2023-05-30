@@ -11,19 +11,18 @@
           class="navbar-outline"
           src="/assets/icons/ecotoy_logo_wh_bg.svg"></a>
       </li>
-      <app-search class="mobile-sm:visible sm:hidden"></app-search>
     </ul>
     <ul
       class="flex justify-end">
       <li
         class="lg:hidden mobile-lg:visible btn-light ml-5">
         <a
-          [routerLink]="['/shop']">Shop</a>
+          [routerLink]="['/create']">Create</a>
       </li>
       <li
         class="lg:hidden mobile-lg:visible btn-light ml-5">
         <a
-          [routerLink]="['/playroom']">Playroom</a>
+          [routerLink]="['/playroom']">Statistic</a>
       </li>
       <li>
         <button
@@ -33,12 +32,8 @@
           Log In
         </button>
       </li>
-      <li>
-        <a
-          [routerLink]="['/cart']"><img
-          alt="cart"
-          class="sm:hidden mobile-sm:visible ml-10 navbar-outline"
-          src="/assets/icons/cart_wh_bg_icon.svg"></a>
+      <li class="ml-5">
+        <app-avatar></app-avatar>
       </li>
       <button (click)="showDropdownMenu()"
               class="lg:visible lg:ml-10 sm:ml-5 mobile-lg:hidden navbar-outline">
@@ -53,11 +48,11 @@
           class="text-primary font-semibold text-xl">
         <li class="border-b-bgDark border-b-[1.5px] border-opacity-50 py-2">
           <a
-            [routerLink]="['/shop']">Shop</a>
+            [routerLink]="['/shop']">Create</a>
         </li>
         <li class="border-b-bgDark border-b-[1.5px] border-opacity-50 py-2">
           <a
-            [routerLink]="['/playroom']">Playroom</a>
+            [routerLink]="['/playroom']">Statistic</a>
         </li>
         <li class="border-b-bgDark border-b-[1.5px] border-opacity-50 py-2">
           <a
@@ -72,3 +67,4 @@
     </div>
   </div>
 </nav>
+
