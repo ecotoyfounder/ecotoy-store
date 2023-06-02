@@ -1,7 +1,7 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
-
 import {AppRoutingModule} from "./app-routing.module";
+
 import {AppComponent} from "./app.component";
 import {SignupPageComponent} from "./admin/pages/signup-page/signup-page.component";
 import {LoginPageComponent} from "./admin/pages/login-page/login-page.component";
@@ -17,14 +17,15 @@ import {EditGoodPageComponent} from "./admin/pages/edit-good-page/edit-good-page
 import {MainLayoutComponent} from "./main/main-layout/main-layout.component";
 import {GoodPageComponent} from "./pages/good-page/good-page.component";
 import {FooterComponent} from "./components/footer/footer.component";
-import {ClientLoginComponent} from "./main/pages/client-login/client-login.component";
 import {ClientSignupComponent} from "./main/pages/client-signup/client-signup.component";
 import {ClientDashboardComponent} from "./main/pages/client-dashboard/client-dashboard.component";
 import {ReviewPageComponent} from "./main/pages/review-page/review-page.component";
 import {ReviewCardComponent} from "./components/review-card/review-card.component";
 import {GoodCardComponent} from "./components/good-card/good-card.component";
 import {CatalogPageComponent} from "./pages/catalog-page/catalog-page.component";
-import {SharedModule} from "./common-components/shared.module";
+import {ClientLoginComponent} from "./main/pages/client-login/client-login.component";
+import {SharedModule} from "./shared/shared.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -43,17 +44,19 @@ import {SharedModule} from "./common-components/shared.module";
     MainLayoutComponent,
     GoodPageComponent,
     FooterComponent,
-    ClientLoginComponent,
     ClientSignupComponent,
     ClientDashboardComponent,
     ReviewPageComponent,
     ReviewCardComponent,
     GoodCardComponent,
-    CatalogPageComponent
+    CatalogPageComponent,
+    ClientLoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     SharedModule
   ],
   providers: [],

@@ -18,18 +18,20 @@
       <li
         class="lg:hidden mobile-lg:visible btn-light ml-5">
         <a
-          [routerLink]="['/shop']">Shop</a>
+          [routerLink]="['/shop']"
+          routerLinkActive="active-link">Shop</a>
       </li>
       <li
         class="lg:hidden mobile-lg:visible btn-light ml-5">
         <a
-          [routerLink]="['/playroom']">Playroom</a>
+          [routerLink]="['/playroom']"
+          routerLinkActive="active-link">Playroom</a>
       </li>
       <li>
         <button
           (click)="auth.logIn()"
-          [routerLink]="['/login']"
-          class="lg:hidden mobile-2xl:visible btn-primary ml-10">
+          [routerLink]="['/common-login']"
+          class="btn-darkest pb-1.5 lg:hidden mobile-2xl:visible ml-10">
           Log In
         </button>
       </li>
@@ -66,7 +68,7 @@
         <li
           class="text-red-700 py-6">
           <a
-            [routerLink]="['/']">Log Out</a>
+            [routerLink]="['/common-login']">Log In</a>
         </li>
       </ul>
     </div>

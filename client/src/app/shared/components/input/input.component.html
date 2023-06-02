@@ -1,0 +1,14 @@
+<div class="my-2.5 mx-auto text-center">
+  <label class="text-darkColor text-md">{{ label }}:</label>
+  <input
+    [formControl]="control"
+    [placeholder]="placeholder"
+    [type]="type"
+    class="input-form w-full placeholder-placeholderColor">
+  <div *ngIf="(control.touched || control.dirty) && control.invalid"
+       class="error">
+    <small *ngIf="control.errors?.required">{{ label }} is required</small>
+    <small *ngIf="control.errors?.email">{{ label }} incorrect</small>
+    <small *ngIf="control.errors?.minlength">{{ label }} must contain at least 8 characters</small>
+  </div>
+</div>

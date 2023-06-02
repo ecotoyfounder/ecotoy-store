@@ -7,8 +7,11 @@ import {PlayroomPageComponent} from "./main/pages/playroom-page/playroom-page.co
 import {ErrorPageComponent} from "./pages/error-page/error-page.component";
 import {MainLayoutComponent} from "./main/main-layout/main-layout.component";
 import {GoodPageComponent} from "./pages/good-page/good-page.component";
-import {ClientLoginComponent} from "./main/pages/client-login/client-login.component";
+import {CommonLoginComponent} from "./shared/pages/common-login/common-login.component";
 import {CatalogPageComponent} from "./pages/catalog-page/catalog-page.component";
+import {ClientLoginComponent} from "./main/pages/client-login/client-login.component";
+import {SignupPageComponent} from "./admin/pages/signup-page/signup-page.component";
+import {ClientSignupComponent} from "./main/pages/client-signup/client-signup.component";
 
 const routes: Routes = [
   {
@@ -24,7 +27,9 @@ const routes: Routes = [
       },
       {path: "cart", component: CartPageComponent},
       {path: "playroom", component: PlayroomPageComponent},
-      {path: "login", component: ClientLoginComponent}
+      {path: "common-login", component: CommonLoginComponent},
+      {path: "login", component: ClientLoginComponent},
+      {path: "signup", component: ClientSignupComponent}
     ]
   },
   {path: "admin", loadChildren: () => import("./admin/admin-layout.module").then(mod => mod.AdminLayoutModule)},

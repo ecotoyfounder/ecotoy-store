@@ -9,14 +9,16 @@ module.exports = {
       colors: {
         primary: "#7570F9",
         secondary: "#F970F4",
-        darkest: "#00d0df",
-        darkColor: "#4113B7",
-        light: "#FDEFFF",
         textColor: "#803CBD",
+        outColor: "#a500c3",
+        errorColor: "#db271f",
         bgDark: "#70F5F9",
+        darkest: "#00d0df",
+        light: "#FDEFFF",
         bgLight: "#F6FFFE",
+        placeholderColor: "#97c6fc",
         footerColor: "#8C85EF",
-        placeholderColor: "#97c6fc"
+        darkColor: "#4113B7"
       },
       screens: {
         "xxl": {"max": "1680px"},
@@ -43,10 +45,11 @@ module.exports = {
   plugins: [
     plugin(function ({addComponents}) {
       addComponents({
-        ".btn-primary": {
-          backgroundColor: "#7570F9",
-          color: "#F6FFFE",
+        ".btn-primary, .btn-primary-full, .btn-secondary, .btn-secondary-full, .btn-light, .btn-light-full, .btn-darkest, .btn-darkest-full": {
+          backgroundColor: "#fff",
+          color: "#4113b7",
           borderRadius: "50px",
+          boxShadow: "2px 2px 3px #70F5F9",
           minWidth: "110px",
           height: "37px",
           fontSize: 18,
@@ -54,6 +57,19 @@ module.exports = {
           transitionDelay: ".07s",
           cursor: "pointer",
           textAlign: "center",
+          paddingTop: "3.5px",
+
+          "&:hover": {
+            transition: "0.5s",
+            backgroundColor: "#00e7f3",
+            color: "#FDEFFF",
+            fontWeight: "bold"
+          },
+        },
+
+        ".btn-primary": {
+          backgroundColor: "#7570F9",
+          color: "#F6FFFE",
 
           "&:hover": {
             backgroundColor: "#5D169D",
@@ -63,48 +79,39 @@ module.exports = {
 
         ".btn-secondary": {
           backgroundColor: "#F970F4",
+          boxShadow: "2px 2px 3px #a500c3",
           color: "#F6FFFE",
-          borderRadius: "50px",
-          minWidth: "110px",
-          height: "37px",
-          fontSize: 18,
-          fontWeight: "600",
-          transitionDelay: ".07s",
-          cursor: "pointer",
-          textAlign: "center",
-          paddingTop: "3.5px",
 
           "&:hover": {
-            backgroundColor: "#5D169D",
+            backgroundColor: "#a500c3",
             fontWeight: "bold",
           }
         },
 
-        ".btn-light, .btn-light-full": {
-          backgroundColor: "#fff",
-          color: "#4113b7",
-          borderRadius: "50px",
-          minWidth: "110px",
-          height: "37px",
-          fontSize: 18,
-          fontWeight: "600",
-          transitionDelay: ".07s",
-          cursor: "pointer",
-          textAlign: "center",
-          paddingTop: "3.5px",
-          outlineStyle: "solid",
-          outlineColor: "#70F5F9",
-          outlineWidth: "2px",
+        ".btn-darkest": {
+          backgroundColor: "#00d0df",
+          color: "#F6FFFE",
 
           "&:hover": {
-            backgroundColor: "#00e7f3",
-            color: "#FDEFFF",
-            fontWeight: "bold"
+            backgroundColor: "#00a4aa",
+            fontWeight: "bold",
           }
         },
 
-        ".btn-light-full": {
-          minWidth: "100%"
+        ".active-link": {
+          display: "block",
+          textAlign: "center",
+          margin: "1.5px 5px",
+          borderRadius: "50px",
+          backgroundColor: "#dffdfd",
+          outlineStyle: "solid",
+          outlineColor: "#70F5F9",
+          outlineWidth: "2.5px",
+
+          "&:hover": {
+            transition: "0.5s",
+            backgroundColor: "#00e7f3",
+          },
         },
 
         ".btn-arrow-dark": {
@@ -122,6 +129,10 @@ module.exports = {
             backgroundColor: "#5D169D",
             fontWeight: "bold",
           }
+        },
+
+        ".btn-primary-full, .btn-secondary-full, .btn-light-full, .btn-darkest-full": {
+          minWidth: "100%"
         },
 
         ".btn-arrow-light": {
@@ -171,16 +182,17 @@ module.exports = {
             transform: "scale(1.1)",
             transition: "0.2s",
             color: "#F6FFFE",
+            cursor: "pointer",
             outlineColor: "#04eef7",
             outlineWidth: "1.9px",
           }
         },
 
-        ".input": {
+        ".input, .input-form": {
           color: "#4113b7",
           boxShadow: "2px 2px 3px #70f4f9",
           cursor: "pointer",
-          minWidth: "220px",
+          minWidth: "200px",
           maxWidth: "350px",
           padding: "5px",
           borderRadius: "5px",
@@ -189,6 +201,11 @@ module.exports = {
             outlineColor: "#70F5F9",
             outlineWidth: "2px"
           }
+        },
+
+        ".input-form": {
+          maxWidth: "580px",
+          boxShadow: "0 0 5px #70f4f9",
         },
 
         ".search-placeholder": {
@@ -225,7 +242,7 @@ module.exports = {
           outlineColor: "#04eef7",
           outlineWidth: "2px",
           borderRadius: "5%",
-          maxWidth: "225px",
+          width: "200px",
           padding: "4px",
           cursor: "pointer",
 
@@ -252,6 +269,22 @@ module.exports = {
             transform: "scale(1.05)",
             transition: "0.5s"
           }
+        },
+
+        ".form": {
+          display: "block",
+          textAlign: "center",
+          border: "solid #00d0df 0.5px",
+          borderRadius: "10px",
+          boxShadow: "0 0 5px #00d0df",
+          maxWidth: "600px",
+          margin: "0 auto",
+          paddingBlock: "20px",
+          paddingInline: "40px"
+        },
+
+        ".error": {
+          color: "#db271f"
         }
       });
     })

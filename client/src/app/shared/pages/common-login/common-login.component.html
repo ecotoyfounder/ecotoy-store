@@ -1,0 +1,21 @@
+<div class="mt-44 max-w-[650px] m-auto sm:mt-[50%]">
+  <div class="flex justify-between align-middle lg:block lg:mx-auto lg:my-10 sm:px-3">
+    <ul class="block">
+      <li class="input bg-white text-center text-xl font-semibold hover:underline lg:mx-auto sm:w-full">
+        <a [routerLink]="['/login']">Log In to my Account</a>
+      </li>
+      <li class="mt-3 text-center text-md text-darkest font-semibold hover:underline lg:mx-auto sm:w-full">
+        <a [routerLink]="['/signup']">or Create an Account</a>
+      </li>
+    </ul>
+    <hr class="rotate-90 border-bgDark w-32 mt-8 lg:rotate-0 lg:w-full lg:my-8">
+    <ul class="block">
+      <li class="input bg-white text-center text-xl font-semibold hover:underline lg:mx-auto sm:w-full">
+        <a [routerLink]="['/admin', 'login']">Log In as an Admin</a>
+      </li>
+      <li class="mt-3 text-center text-md text-darkest font-semibold hover:underline lg:mx-auto sm:w-full">
+        <a [routerLink]="['/admin', 'signup']">or Sign Up as an Admin</a>
+      </li>
+    </ul>
+  </div>
+</div>

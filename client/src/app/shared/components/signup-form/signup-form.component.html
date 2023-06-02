@@ -1,0 +1,33 @@
+<form (ngSubmit)="vc.submit()"
+      [formGroup]="vc.form"
+      class="form mt-44 sm:border-none sm:shadow-none sm:px-2 sm:mt-24">
+  <h1 class="my-5 text-xl text-darkest">You are Welcome!</h1>
+
+  <app-input
+    [control]="vc.getControl('name')"
+    [label]="'Name'"
+    [placeholder]="'Your Name'"
+    [type]="'text'"
+  ></app-input>
+
+  <app-input
+    [control]="vc.getControl('email')"
+    [label]="'Email'"
+    [placeholder]="'Your Email'"
+    [type]="'email'"
+  ></app-input>
+
+  <app-input
+    [control]="vc.getControl('password')"
+    [label]="'Password'"
+    [placeholder]="'Your Password 8+ Symbols'"
+    [type]="'password'"
+  ></app-input>
+
+  <button [disabled]="vc.form.invalid"
+          class="btn-darkest pb-1.5 my-5"
+          type="submit">Log In
+  </button>
+</form>
+
+
