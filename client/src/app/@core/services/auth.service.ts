@@ -1,18 +1,24 @@
-import {Injectable} from '@angular/core';
+import {Injectable} from "@angular/core";
+import {Router} from "@angular/router";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class AuthService {
 
-  private isAuth = false
+  private isAuth = false;
 
-  logIn() {
-    this.isAuth = true
+  constructor(private router: Router) {
   }
 
-  logOut() {
-    this.isAuth = false
+  logIn() {
+    this.isAuth = true;
+  }
+
+  logOut(event: Event) {
+    event.preventDefault();
+    this.router.navigate(["/admin", "login"]);
+    this.isAuth = false;
   }
 
 }
