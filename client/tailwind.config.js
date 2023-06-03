@@ -23,7 +23,7 @@ module.exports = {
       screens: {
         "xxl": {"max": "1680px"},
         "2xl": {"max": "1370px"},
-        "xl": {"max": "1120px"},
+        "xl": {"max": "1144px"},
         "lg": {"max": "1025px"},
         "md": {"max": "800px"},
         "sm": {"max": "589px"},
@@ -32,7 +32,7 @@ module.exports = {
         "ssm": {"max": "374px"},
         "fsm": {"max": "319px"},
         "mobile-2xl": "1370px",
-        "mobile-xl": "1120px",
+        "mobile-xl": "1144px",
         "mobile-lg": "1025px",
         "mobile-md": "800px",
         "mobile-sm": "589px",
@@ -65,6 +65,18 @@ module.exports = {
             color: "#FDEFFF",
             fontWeight: "bold"
           },
+
+          "&:disabled": {
+            backgroundColor: "#aef8fa",
+            color: "#04eef7",
+
+            "&:hover": {
+              transition: "0s",
+              backgroundColor: "#aef8fa",
+              color: "#04eef7",
+              fontWeight: "600"
+            }
+          }
         },
 
         ".btn-primary": {
@@ -172,7 +184,7 @@ module.exports = {
           }
         },
 
-        ".navbar-outline": {
+        ".navbar-outline, .small-icons": {
           outlineStyle: "solid",
           outlineColor: "transparent",
           borderRadius: "50%",
@@ -188,11 +200,22 @@ module.exports = {
           }
         },
 
+        ".small-icons": {
+          backgroundColor: "#F6FFFE",
+          borderRadius: "5px",
+          boxShadow: "0 0 5px #70f4f9",
+          paddingInline: "3px",
+
+          "&:hover": {
+            transform: "scale(1.0)",
+          }
+        },
+
         ".input, .input-form": {
           color: "#4113b7",
           boxShadow: "2px 2px 3px #70f4f9",
           cursor: "pointer",
-          minWidth: "200px",
+          minWidth: "160px",
           maxWidth: "350px",
           padding: "5px",
           borderRadius: "5px",
@@ -206,6 +229,14 @@ module.exports = {
         ".input-form": {
           maxWidth: "580px",
           boxShadow: "0 0 5px #70f4f9",
+          outlineStyle: "solid",
+          outlineColor: "transparent",
+
+          "&:hover": {
+            transition: "0.2s",
+            outlineColor: "#04eef7",
+            outlineWidth: "1.9px",
+          }
         },
 
         ".search-placeholder": {

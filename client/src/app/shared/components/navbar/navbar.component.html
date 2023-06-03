@@ -15,25 +15,47 @@
     </ul>
     <ul
       class="flex justify-end">
+      <li *ngIf="authService.isAuth"
+          class="xl:hidden mobile-xl:visible btn-light ml-5">
+        <a
+          [routerLink]="['/dashboard']"
+          routerLinkActive="active-link">Dashboard</a>
+      </li>
       <li
-        class="lg:hidden mobile-lg:visible btn-light ml-5">
+        class="xl:hidden mobile-xl:visible btn-light ml-5">
         <a
           [routerLink]="['/shop']"
           routerLinkActive="active-link">Shop</a>
       </li>
-      <li
-        class="lg:hidden mobile-lg:visible btn-light ml-5">
+      <li *ngIf="!vc.admin"
+          class="xl:hidden mobile-xl:visible btn-light ml-5">
         <a
           [routerLink]="['/playroom']"
           routerLinkActive="active-link">Playroom</a>
       </li>
-      <li>
+      <li *ngIf="vc.admin"
+          class="xl:hidden mobile-xl:visible btn-light ml-5">
+        <a
+          [routerLink]="['/create']"
+          routerLinkActive="active-link">Create</a>
+      </li>
+      <li *ngIf="!authService.isAuth">
         <button
-          (click)="auth.logIn()"
           [routerLink]="['/common-login']"
           class="btn-darkest pb-1.5 lg:hidden mobile-2xl:visible ml-10">
           Log In
         </button>
+      </li>
+      <li *ngIf="authService.isAuth">
+        <button
+          (click)="authService.logOut($event)"
+          class="btn-secondary pb-1.5 lg:hidden mobile-2xl:visible ml-10">
+          Log Out
+        </button>
+      </li>
+      <li *ngIf="authService.isAuth"
+          class="ml-10">
+        <app-avatar></app-avatar>
       </li>
       <li>
         <a
@@ -53,22 +75,39 @@
          class="block pt-5 fixed bg-blend-darken bg-white/80 top-[70px] right-0 left-0 pl-14 sm:pl-7 h-screen">
       <ul (click)="navigateTo()"
           class="text-primary font-semibold text-xl">
+        <li *ngIf="authService.isAuth"
+            class="border-b-bgDark border-b-[1.5px] border-opacity-50 py-2">
+          <a
+            [routerLink]="['/dashboard']">Dashboard</a>
+        </li>
         <li class="border-b-bgDark border-b-[1.5px] border-opacity-50 py-2">
           <a
             [routerLink]="['/shop']">Shop</a>
         </li>
-        <li class="border-b-bgDark border-b-[1.5px] border-opacity-50 py-2">
+        <li *ngIf="!vc.admin"
+            class="border-b-bgDark border-b-[1.5px] border-opacity-50 py-2">
           <a
             [routerLink]="['/playroom']">Playroom</a>
+        </li>
+        <li *ngIf="vc.admin"
+            class="border-b-bgDark border-b-[1.5px] border-opacity-50 py-2">
+          <a
+            [routerLink]="['/create']">Create</a>
         </li>
         <li class="border-b-bgDark border-b-[1.5px] border-opacity-50 py-2">
           <a
             [routerLink]="['/cart']">Cart</a>
         </li>
-        <li
-          class="text-red-700 py-6">
+        <li *ngIf="!authService.isAuth"
+            class="text-darkest py-6">
           <a
             [routerLink]="['/common-login']">Log In</a>
+        </li>
+        <li (click)="authService.logOut($event)"
+            *ngIf="authService.isAuth"
+            class="text-outColor py-6">
+          <a
+            [routerLink]="['/']">Log Out</a>
         </li>
       </ul>
     </div>
