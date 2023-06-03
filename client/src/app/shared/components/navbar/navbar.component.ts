@@ -1,6 +1,6 @@
 import {Component, HostListener} from "@angular/core";
-import {AuthService} from "../../@core/services/auth.service";
-import {Router} from "@angular/router";
+import {AuthService} from "../../../@core/services/auth.service";
+import {ValidatorsComponent} from "../validators/validators.component";
 
 @Component({
   selector: "app-navbar",
@@ -11,7 +11,10 @@ export class NavbarComponent {
 
   isDropdownOpen = false;
 
-  constructor(protected auth: AuthService, private router: Router) {
+  constructor(
+    protected authService: AuthService,
+    protected vc: ValidatorsComponent,
+  ) {
   }
 
   @HostListener("click", ["$event.target"]) onClick(event: Event) {

@@ -13,5 +13,10 @@ export class InputComponent {
   @Input() label = "";
   @Input() placeholder = "";
   @Input() type = "";
+  @Input() eyeIcon = true;
 
+  togglePasswordIsVisible() {
+    this.type === "password" ? (this.type = "text") : (this.type = "password");
+    this.eyeIcon = !this.eyeIcon;
+  }
 }

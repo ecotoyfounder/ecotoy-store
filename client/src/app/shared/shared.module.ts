@@ -12,7 +12,11 @@ import {LoginFormComponent} from "./components/login-form/login-form.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import {SignupFormComponent} from "./components/signup-form/signup-form.component";
 import {ValidatorsComponent} from "./components/validators/validators.component";
-import { InputComponent } from './components/input/input.component';
+import {InputComponent} from "./components/input/input.component";
+import {HttpClientModule} from "@angular/common/http";
+import {AuthService} from "../@core/services/auth.service";
+import {NavbarComponent} from "./components/navbar/navbar.component";
+import {FooterComponent} from "./components/footer/footer.component";
 
 
 @NgModule({
@@ -26,12 +30,15 @@ import { InputComponent } from './components/input/input.component';
     LoginFormComponent,
     SignupFormComponent,
     ValidatorsComponent,
+    NavbarComponent,
+    FooterComponent,
     InputComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     CommonLoginComponent,
@@ -39,9 +46,12 @@ import { InputComponent } from './components/input/input.component';
     FilterComponent,
     SelectComponent,
     Avatar,
+    NavbarComponent,
+    FooterComponent,
     BackButtonComponent,
     LoginFormComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    HttpClientModule
   ],
   providers: [
     ValidatorsComponent

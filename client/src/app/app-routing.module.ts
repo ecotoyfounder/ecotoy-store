@@ -1,17 +1,18 @@
 import {NgModule} from "@angular/core";
 import {PreloadAllModules, RouterModule, Routes} from "@angular/router";
-import {HomePageComponent} from "./pages/home-page/home-page.component";
+
+import {HomePageComponent} from "./shared/pages/home-page/home-page.component";
 import {CartPageComponent} from "./main/pages/cart-page/cart-page.component";
-import {ShopPageComponent} from "./pages/shop-page/shop-page.component";
+import {ShopPageComponent} from "./shared/pages/shop-page/shop-page.component";
 import {PlayroomPageComponent} from "./main/pages/playroom-page/playroom-page.component";
-import {ErrorPageComponent} from "./pages/error-page/error-page.component";
+import {ErrorPageComponent} from "./shared/pages/error-page/error-page.component";
 import {MainLayoutComponent} from "./main/main-layout/main-layout.component";
-import {GoodPageComponent} from "./pages/good-page/good-page.component";
+import {GoodPageComponent} from "./shared/pages/good-page/good-page.component";
 import {CommonLoginComponent} from "./shared/pages/common-login/common-login.component";
-import {CatalogPageComponent} from "./pages/catalog-page/catalog-page.component";
+import {CatalogPageComponent} from "./shared/pages/catalog-page/catalog-page.component";
 import {ClientLoginComponent} from "./main/pages/client-login/client-login.component";
-import {SignupPageComponent} from "./admin/pages/signup-page/signup-page.component";
 import {ClientSignupComponent} from "./main/pages/client-signup/client-signup.component";
+import {ClientDashboardComponent} from "./main/pages/client-dashboard/client-dashboard.component";
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
           {path: "good/:id", component: GoodPageComponent}
         ]
       },
+      {path: "dashboard", component: ClientDashboardComponent},
       {path: "cart", component: CartPageComponent},
       {path: "playroom", component: PlayroomPageComponent},
       {path: "common-login", component: CommonLoginComponent},
