@@ -7,9 +7,9 @@
       [type]="type"
       class="input-form w-full placeholder-placeholderColor">
 
-    <button (click)="togglePasswordIsVisible()"
-            *ngIf="label === 'Password'"
-            class="small-icons ml-2"
+    <div (click)="togglePasswordIsVisible()"
+         *ngIf="label === 'Password'"
+         class="small-icons ml-2"
     >
       <img
         *ngIf="eyeIcon"
@@ -19,12 +19,16 @@
         *ngIf="!eyeIcon"
         alt="eye-slash"
         src="/assets/icons/eye_solid.svg">
-    </button>
+    </div>
   </div>
   <div *ngIf="(control.touched || control.dirty) && control.invalid"
        class="error">
     <small *ngIf="control.errors?.required">{{ label }} is required</small>
     <small *ngIf="control.errors?.email">{{ label }} incorrect</small>
     <small *ngIf="control.errors?.minlength">{{ label }} must contain at least 8 characters</small>
+  </div>
+  <div *ngIf="authService.error$ | async as error"
+       class="error">
+    <small *ngIf="error.includes(label)">{{ error }}</small>
   </div>
 </div>

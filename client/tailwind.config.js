@@ -203,6 +203,7 @@ module.exports = {
         ".small-icons": {
           backgroundColor: "#F6FFFE",
           borderRadius: "5px",
+          paddingBlock: "6.5px",
           boxShadow: "0 0 5px #70f4f9",
           paddingInline: "3px",
 
