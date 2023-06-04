@@ -19,6 +19,7 @@ export class ValidatorsComponent {
 
   client = false;
   admin = false;
+  submitted = false;
 
   constructor(
     private formBuilder: UntypedFormBuilder,
@@ -37,14 +38,15 @@ export class ValidatorsComponent {
       return;
     }
 
+    this.submitted = true;
+
     const user: User = {
       name: this.form.value.name,
       email: this.form.value.email,
-      password: this.form.value.password
+      password: this.form.value.password,
     };
 
     this.authService.signUp(user).subscribe(() => {
-      this.form.reset();
 
       if (this.router.url === "/admin/signup") {
         this.admin = true;
@@ -55,10 +57,11 @@ export class ValidatorsComponent {
         this.client = true;
         this.router.navigate(["/dashboard"]);
       }
+
+      this.submitted = false;
     });
 
     this.authService.logIn(user).subscribe(() => {
-      this.form.reset();
 
       if (this.router.url === "/admin/login") {
         this.admin = true;
@@ -69,6 +72,9 @@ export class ValidatorsComponent {
         this.client = true;
         this.router.navigate(["/dashboard"]);
       }
-    });
+
+      this.form.reset();
+      this.submitted = false;
+    }, () => this.submitted = false);
   }
 }

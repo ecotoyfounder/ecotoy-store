@@ -1,4 +1,4 @@
-import {Component, HostListener} from "@angular/core";
+import {Component} from "@angular/core";
 import {AuthService} from "../../../@core/services/auth.service";
 import {ValidatorsComponent} from "../validators/validators.component";
 
@@ -13,13 +13,9 @@ export class NavbarComponent {
 
   constructor(
     protected authService: AuthService,
-    protected vc: ValidatorsComponent,
+    protected vc: ValidatorsComponent
   ) {
   }
-
-  @HostListener("click", ["$event.target"]) onClick(event: Event) {
-    console.log(event);
-  };
 
   showDropdownMenu(): void {
     this.isDropdownOpen = !this.isDropdownOpen;
@@ -28,4 +24,5 @@ export class NavbarComponent {
   navigateTo() {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
+
 }

@@ -25,7 +25,7 @@
   ></app-input>
 
   <button
-    [disabled]="vc.form.invalid"
+    [disabled]="vc.form.invalid || vc.submitted"
     class="btn-darkest pb-1.5 my-5"
     type="submit">Sign Up
   </button>
