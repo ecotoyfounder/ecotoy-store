@@ -13,6 +13,7 @@ import {CatalogPageComponent} from "./shared/pages/catalog-page/catalog-page.com
 import {ClientLoginComponent} from "./main/pages/client-login/client-login.component";
 import {ClientSignupComponent} from "./main/pages/client-signup/client-signup.component";
 import {ClientDashboardComponent} from "./main/pages/client-dashboard/client-dashboard.component";
+import {AuthGuard} from "./@core/guards/auth.guard";
 
 const routes: Routes = [
   {
@@ -26,8 +27,8 @@ const routes: Routes = [
           {path: "good/:id", component: GoodPageComponent}
         ]
       },
-      {path: "dashboard", component: ClientDashboardComponent},
-      {path: "cart", component: CartPageComponent},
+      {path: "dashboard", component: ClientDashboardComponent, canActivate: [AuthGuard]},
+      {path: "cart", component: CartPageComponent, canActivate: [AuthGuard]},
       {path: "playroom", component: PlayroomPageComponent},
       {path: "common-login", component: CommonLoginComponent},
       {path: "login", component: ClientLoginComponent},

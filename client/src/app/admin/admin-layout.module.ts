@@ -11,6 +11,7 @@ import {EditGoodPageComponent} from "./pages/edit-good-page/edit-good-page.compo
 import {CreateGoodPageComponent} from "./pages/create-good-page/create-good-page.component";
 import {SignupPageComponent} from "./pages/signup-page/signup-page.component";
 import {StatisticPageComponent} from "./pages/statistic-page/statistic-page.component";
+import {AdminAuthGuard} from "../@core/guards/admin-auth.guard";
 
 @NgModule({
   declarations: [
@@ -28,10 +29,10 @@ import {StatisticPageComponent} from "./pages/statistic-page/statistic-page.comp
           {path: "", redirectTo: "/admin/login", pathMatch: "full"},
           {path: "login", component: LoginPageComponent},
           {path: "signup", component: SignupPageComponent},
-          {path: "dashboard", component: DashboardPageComponent},
-          {path: "statistic", component: StatisticPageComponent},
-          {path: "create", component: CreateGoodPageComponent},
-          {path: "good/:id/edit", component: EditGoodPageComponent}
+          {path: "dashboard", component: DashboardPageComponent, canActivate: [AdminAuthGuard]},
+          {path: "statistic", component: StatisticPageComponent, canActivate: [AdminAuthGuard]},
+          {path: "create", component: CreateGoodPageComponent, canActivate: [AdminAuthGuard]},
+          {path: "good/:id/edit", component: EditGoodPageComponent, canActivate: [AdminAuthGuard]}
         ]
       }
     ]),
